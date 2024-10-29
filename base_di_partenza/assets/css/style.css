@@ -1,11 +1,14 @@
 /* IMPOSTAZIONI GENERALI */
 
 body {
-  font-family: Poppins, "Helvetica Neue", sans-serif;
+  font-family: Poppins, 'Helvetica Neue', sans-serif;
   line-height: 1.6;
   padding: 15px;
-  background-image: url("../img/sfondo.png");
+  background-image: url('../img/sfondo.png');
   background-position: center center;
+  position: relative;
+  min-width: 300px;
+  max-height: 100%;
 }
 
 * {
@@ -16,10 +19,80 @@ hr {
   display: none;
 } /* rimuove l'elemento */
 
+main > article > h1 > img {
+  position: absolute;
+  top: 92%;
+  left: 0%;
+  opacity: 0.5;
+  width: 95%;
+}
+main > article > p {
+  font-size: 85%;
+}
+
+header > div p {
+  font-size: 90%;
+}
+header > nav > ul {
+  font-size: 140%;
+}
+main > article > section h2 {
+  position: absolute;
+  top: -7.5%;
+  width: 30%;
+  text-align: center;
+}
+fieldset input {
+  margin-bottom: 5%;
+}
+section p {
+  margin-top: 5%;
+}
+ul,
+li {
+  font-size: 60%;
+}
+.fa-calendar-day,
+.fa-plus {
+  font-size: 200%;
+  color: blue;
+  background-color: rgba(188, 188, 188, 0.8);
+  padding: 2%;
+  border: 2px solid white;
+  border-radius: 20%;
+  display: inline-block;
+  position: fixed;
+  right: 0;
+  bottom: 90px;
+  z-index: 2;
+}
+.fa-plus {
+  bottom: 165px;
+}
+.fa-arrow-up {
+  font-size: 200%;
+  color: red;
+  background-color: rgba(188, 188, 188, 0.8);
+  padding: 2%;
+  border: 2px solid white;
+  border-radius: 20%;
+  position: fixed;
+  right: 0;
+  bottom: 15px;
+  z-index: 2;
+}
+article > h1 > span {
+  white-space: nowrap;
+}
+
 /* HEADER */
 header {
   background: rgb(0, 160, 198);
-  background: linear-gradient(180deg, rgba(0, 160, 198, 1) 0%, rgba(3, 109, 134, 1) 68%);
+  background: linear-gradient(
+    180deg,
+    rgba(0, 160, 198, 1) 0%,
+    rgba(3, 109, 134, 1) 68%
+  );
   text-align: center;
   text-transform: uppercase;
   font-weight: bold;
@@ -27,6 +100,9 @@ header {
   box-shadow: 0 3px 3px #444;
   margin-bottom: 1.5em;
   padding: 2em 1.5em;
+  position: sticky;
+  top: 0;
+  z-index: 1;
 }
 
 @media screen and (min-width: 800px) {
@@ -81,7 +157,7 @@ header nav li a:hover {
   color: red;
 }
 header nav li a::before {
-  content: "\22c6\0020";
+  content: '\22c6\0020';
 }
 
 /* MAIN */
@@ -117,11 +193,12 @@ section h2 {
 /* ELEMENTI NEL MAIN - ARTICLE */
 
 h1 {
-  font-size: 2.6rem;
+  font-size: 2.25rem;
   line-height: 1.2;
   font-weight: bold;
   letter-spacing: -0.03em;
   margin-bottom: 0.7em;
+  position: relative;
 }
 
 p,
@@ -187,6 +264,7 @@ h1 + p {
   border: 4px solid #00a0c6;
   outline: 4px solid #a02571;
   padding: 3px;
+  float: left;
 }
 ul,
 ol {
@@ -229,6 +307,8 @@ iframe {
 /* TABELLE */
 table {
   margin-bottom: 2em;
+  margin-left: auto;
+  margin-right: auto;
 }
 @media screen and (min-width: 500px) {
   table {
@@ -329,7 +409,11 @@ aside div p:last-child {
 /* FOOTER */
 footer {
   background: rgb(53, 53, 53);
-  background: linear-gradient(0deg, rgba(53, 53, 53, 1) 0%, rgba(5, 85, 103, 1) 68%);
+  background: linear-gradient(
+    0deg,
+    rgba(53, 53, 53, 1) 0%,
+    rgba(5, 85, 103, 1) 68%
+  );
   box-shadow: 0 3px 3px #444;
   color: #f0f0f0;
   padding: 1em;
@@ -384,5 +468,91 @@ footer a {
   .social,
   .toTop {
     display: none;
+  }
+}
+@media screen and (min-width: 730px) {
+  h1 {
+    font-size: 450%;
+  }
+  main > article > h1 > img {
+    position: absolute;
+    top: 92%;
+    left: 0%;
+    opacity: 0.5;
+    width: 78%;
+  }
+  main > article > p {
+    font-size: 150%;
+  }
+
+  header > div p {
+    font-size: 160%;
+  }
+  header > nav > ul {
+    font-size: 140%;
+  }
+  ul,
+  li {
+    font-size: 120%;
+  }
+  footer {
+    font-size: 140%;
+    padding: 2%;
+  }
+  main > article > section h2 {
+    width: 20%;
+  }
+  .fa-calendar-day {
+    bottom: 660px;
+  }
+  .fa-plus {
+    bottom: 750px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  body {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  h1 {
+    font-size: 370%;
+  }
+  main > article > h1 > img {
+    top: 84%;
+    left: 42%;
+    width: 46%;
+  }
+  main > article > p {
+    font-size: 130%;
+  }
+
+  header > div p {
+    font-size: 150%;
+  }
+  header > nav > ul {
+    font-size: 120%;
+  }
+  ul,
+  li {
+    font-size: 115%;
+  }
+  footer {
+    font-size: 183%;
+    padding: 2%;
+  }
+  main > article > section h2 {
+    width: 20%;
+  }
+  .fa-calendar-day {
+    bottom: 640px;
+  }
+  .fa-plus {
+    bottom: 740px;
+  }
+  .fa-calendar-day,
+  .fa-plus,
+  .fa-arrow-up {
+    font-size: 120%;
   }
 }
